@@ -1,0 +1,37 @@
+
+Daniel Neacsu <daniel.neacsu7@gmail.com>
+2:31 PM (0 minutes ago)
+to me
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurse Handover Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Nurse Handover Tool</h1>
+    
+    <!-- Image upload section -->
+    <label for="imageUpload">Upload or take a picture of your notes:</label>
+    <input type="file" id="imageUpload" accept="image/*" onchange="processImage()">
+    
+    <!-- SBAR Report Section -->
+    <h2>Generated SBAR Report</h2>
+    <div id="sbarReport">
+      <h3>Situation</h3>
+      <p id="situation"></p>
+
+      <h3>Background</h3>
+      <p id="background"></p>
+
+      <h3>Assessment</h3>
+      <p id="assessment"></p>
+
+      <h3>Recommendation</h3>
+      <p id="recommendation"></p>
+    </div>
+  </div>
