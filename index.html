@@ -10,25 +10,32 @@
   <div class="container">
     <h1>Nurse Handover Tool</h1>
     
-    <!-- Image upload section -->
-    <label for="imageUpload">Upload or take a picture of your notes:</label>
-    <input type="file" id="imageUpload" accept="image/*">
-    <button onclick="processImage()">Convert to SBAR</button>
+    <!-- Image Upload and Button -->
+    <div class="upload-section">
+      <label for="imageUpload">Upload or take a picture of your notes:</label>
+      <input type="file" id="imageUpload" accept="image/*">
+      <button onclick="processImage()">Convert to SBAR Report</button>
+    </div>
     
     <!-- SBAR Report Section -->
     <h2>Generated SBAR Report</h2>
     <div id="sbarReport">
-      <h3>Situation</h3>
-      <p id="situation"></p>
-
-      <h3>Background</h3>
-      <p id="background"></p>
-
-      <h3>Assessment</h3>
-      <p id="assessment"></p>
-
-      <h3>Recommendation</h3>
-      <p id="recommendation"></p>
+      <div class="sbar-section">
+        <h3>Situation</h3>
+        <p id="situation">-</p>
+      </div>
+      <div class="sbar-section">
+        <h3>Background</h3>
+        <p id="background">-</p>
+      </div>
+      <div class="sbar-section">
+        <h3>Assessment</h3>
+        <p id="assessment">-</p>
+      </div>
+      <div class="sbar-section">
+        <h3>Recommendation</h3>
+        <p id="recommendation">-</p>
+      </div>
     </div>
   </div>
   
