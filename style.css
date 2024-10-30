@@ -1,25 +1,68 @@
-function generateSBAR(text) {
-  // Simple keyword-based extraction for demo purposes
-  const sections = {
-    situation: extractText(text, ["Situation", "SIT"]),
-    background: extractText(text, ["Background", "BG"]),
-    assessment: extractText(text, ["Assessment", "ASMT"]),
-    recommendation: extractText(text, ["Recommendation", "REC"]),
-  };
-
-  // Update HTML with extracted text
-  document.getElementById("situation").innerText = sections.situation;
-  document.getElementById("background").innerText = sections.background;
-  document.getElementById("assessment").innerText = sections.assessment;
-  document.getElementById("recommendation").innerText = sections.recommendation;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-function extractText(text, keywords) {
-  for (const keyword of keywords) {
-    const index = text.indexOf(keyword);
-    if (index !== -1) {
-      return text.substring(index + keyword.length).split("\n")[0].trim();
-    }
-  }
-  return "Not found";
+.container {
+  max-width: 600px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.upload-section {
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+h2 {
+  color: #444;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.sbar-section {
+  margin-bottom: 15px;
+}
+
+.sbar-section h3 {
+  color: #555;
+}
+
+#sbarReport p {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  color: #333;
 }
